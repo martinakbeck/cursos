@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        .row{
+            display: flex;
+        }
+        .col1{
+            width: 8.33%;
+        }
+        .col2{
+            width: 16.66%;
+        }
+        .col3{
+            width: 25%;
+        }
+        .col4{
+            width: 33.33%;
+        }
+        .col6{
+            width: 50%;
+        }
+        .col8{
+            width: 66.66%
+        }
+        .col9{
+            width:75%;
+        }
+        .col12{
+            width:100%;
+        }
+        .azul{
+            background-color: blue;
+        }
+        .verde{
+            background-color: green;
+        }
+        .rosa{
+            background-color: pink;
+        }
+        .amarelo{
+            background-color: yellow;
+        }
+        .vermelho{
+            background-color: red;
+        }
+        .d-mobile-none{
+            display:none;
+        }
+        .d-mobile-block{
+            display:block;
+        }
+        .float-mobile-none{
+            float: none;
+        }
+        .img-texto img{
+            margin: 10px auto;
+        }
+        @media(min-width:576px) {
+            .d-small-block{
+                display:block
+            }
+            .d-small-none{
+                display:none
+            }
+            .col-small-6{
+                width:50%;
+                float:left;
+            }
+        }
+        @media(min-width:768px) {
+            .float-tablet-left{
+                float: left;
+            }
+            .img-texto img{
+                margin: 0 10px 10px 0;
+            }
+            .col-tablet-4{
+                width:33.33%
+            }
+        }
+        @media(min-width:992px){
+            .col-note-3{
+                width:25%
+            }
+        }
+        @media(min-width:1200px){
+            .col-desktop-2{
+                width:16.66%
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="row azul">
+        <section class="col3">
+            <img class="col12" style="max-width:150px;" src="https://via.placeholder.com/150"/>
+        </section>
+        <section class="col6">
+            <h1>Título</h1>
+        </section>
+        <section class="col3 d-small-none d-mobile-block">
+            <button>Abrir menu</button>
+        </section>
+    </header>
+    <main class="row rosa">
+        <div class="col3 amarelo d-mobile-none d-small-block">
+            <nav>
+                <ul>
+                    <li>pag1</li>
+                    <li>pag2</li>
+                    <li>pag3</li>
+                </ul>
+            </nav>
+        </div>        
+        <section class="verde">
+            <article>
+                <p>
+                    <div class="img-texto" style="text-align: center;">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="https://via.placeholder.com/500x100" />
+                            <source media="(min-width:992px)" srcset="https://via.placeholder.com/400x100" />
+                            <source media="(min-width:768px)" srcset="https://via.placeholder.com/300x100" />
+                            <source media="(min-width:576px)" srcset="https://via.placeholder.com/200x100" />
+                            <img src="https://via.placeholder.com/100"/> 
+
+                        </picture>
+
+                    </div>>
+                    
+                    Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Quem manda na minha terra sou euzis! Mé faiz elementum girarzis, nisi eros vermeio.
+                </p>
+
+                <p>Quem num gosta di mim que vai caçá sua turmis! Si num tem leite então bota uma pinga aí cumpadi! Sapien in monti palavris qui num significa nadis i pareci latim. Detraxit consequat et quo num tendi nada.</p>
+
+                <p>Casamentiss faiz malandris se pirulitá. In elementis mé pra quem é amistosis quis leo. Delegadis gente finis, bibendum egestas augue arcu ut est. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.</p>
+
+                <p>Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.</p>
+
+                <p>Suco de cevadiss deixa as pessoas mais interessantis. Interagi no mé, cursus quis, vehicula ac nisi. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Manduma pindureta quium dia nois paga.</p>
+            </article>
+            <section></section>
+            <h2>Galeria</h2>
+            <section>
+                <picture>
+                    <img class="col-small-6 col12 col-tablet-4 col-note-3 col-desktop-2" src="https://via.placeholder.com/150"/>
+                </picture>
+                <picture>
+                    <img class="col-small-6 col12 col-tablet-4 col-note-3 col-desktop-2" src="https://via.placeholder.com/150"/>
+                </picture>
+                <picture>
+                    <img class="col-small-6 col12 col-tablet-4 col-note-3 col-desktop-2" src="https://via.placeholder.com/150"/>
+                </picture>
+                <picture>
+                    <img class="col-small-6 col12 col-tablet-4 col-note-3 col-desktop-2" src="https://via.placeholder.com/150"/>
+                </picture>
+                <picture>
+                    <img class="col-small-6 col12 col-tablet-4 col-note-3 col-desktop-2" src="https://via.placeholder.com/150"/>
+                </picture>
+                <picture>
+                    <img class="col-small-6 col12 col-tablet-4 col-note-3 col-desktop-2" src="https://via.placeholder.com/150"/>
+                </picture>
+                <picture>
+                    <img class="col-small-6 col12 col-tablet-4 col-note-3 col-desktop-2" src="https://via.placeholder.com/150"/>
+                </picture>
+                <picture>
+                    <img class="col-small-6 col12 col-tablet-4 col-note-3 col-desktop-2" src="https://via.placeholder.com/150"/>
+                </picture>
+                <picture>
+                    <img class="col-small-6 col12 col-tablet-4 col-note-3 col-desktop-2" src="https://via.placeholder.com/150"/>
+                </picture>
+                <picture>
+                    <img class="col-small-6 col12 col-tablet-4 col-note-3 col-desktop-2" src="https://via.placeholder.com/150"/>
+                </picture>
+                <picture>
+                    <img class="col-small-6 col12 col-tablet-4 col-note-3 col-desktop-2" src="https://via.placeholder.com/150"/>
+                </picture>
+                <picture>
+                    <img class="col-small-6 col12 col-tablet-4 col-note-3 col-desktop-2" src="https://via.placeholder.com/150"/>
+                </picture>
+                </section>
+            </section>
+        </section>
+    </main>    
+    <footer class="row vermelho">
+        <div class="col12">
+            <p>Martina Keunecke</p>
+        </div>
+    </footer>    
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ei jacs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+
+</head>
+<body>
+    <h1>Ajax= ei jacs</h1>
+    <button class="get" value="https://httpbin.org/ip">Qual o meu IP?</button>
+    <button class="get" value="https://adedonha-35013.firebaseio.com/posts.json">Dados Firebase</button>
+    <button id="eco_get" value="https://httpbin.org/get?nome=rubem&aula=javascript%20com%20ajax">Eco de parametros</button>
+    <br>
+    <input type="number" id="segundos">
+    <button id="delay" name="https://httpbin.org/delay/10" >Delay</button>
+    
+    <div style="border: solid 1px;">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome">
+        <br>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email">
+        <br>
+
+        <button id="enviar" name="https://httpbin.org/post">Enviar</button>
+
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

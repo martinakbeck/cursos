@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Switch</title>
+</head>
+<body>
+    <form action="javascript:significado_das_cores()">
+        <label for="">Cor</label>
+        <input type="text" id="cor">
+        <input type="submit" value="Quero saber mais">
+        <br>
+        <input type="color">
+
+
+    </form>
+
+    <script>
+        
+        function significado_das_cores(){
+            var cor = document.getElementById("cor").value
+            switch(cor){
+                case "vermelho":
+                    console.error("Sangue, guerra, conflito")
+                break
+
+                case "azul":
+                    console.log("paz, tranquilidade, harmonia")
+                break
+
+                case "amarelo":
+                    console.warn("luz, calor, prosperidade, felicidades")
+                break
+
+                case "verde":
+                    console.warn("esperança, liberdade, saúde")
+                break
+
+                default:
+                    console.log("Não temos nada a dizer sobre esta cor, escolha outra")
+                break
+            }
+        }
+    </script>
+</body>
+</html>

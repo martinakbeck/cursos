@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Exemplo - prompt</title>
+</head>
+<body>
+    <h1>Aprendendo prompt</h1>
+
+    <ul>
+        <li><a href="/formulario.html" target="_blank">Capturando com formulários</a></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <script>
+        //atribuir um valor a uma variavel capturando dados do usuário
+        var nome_completo = prompt("Bem vindo, informe o seu nome: ")
+        
+        console.log(nome_completo)
+        console.log("Bem vindo, "+nome_completo)
+        console.log(typeof(nome_completo))
+
+        let idade = Number(prompt("Quer falar sua idade?"))
+        
+
+        console.log("Sua idade é "+idade)
+        console.log(typeof(idade))
+
+        var altura =Number(prompt("Qual a sua altura?"))
+        console.log("Sua altura é "+ altura)
+        console.log(typeof(altura))
+        console.warn("Sua altura é "+altura)
+        console.error("teste")
+
+    </script>
+</body>
+</html>

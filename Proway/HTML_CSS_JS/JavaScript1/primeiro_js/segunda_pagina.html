@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Segunda Página</title>
+</head>
+
+<body>
+    <h1>Minha segunda página</h1>
+    <a href="index.html">Ir para primeira página</a>
+    <br>
+    <a href="script_oculto.html">Ir para Script Oculto</a>
+
+</body>
+
+<script>
+    var nome = "Martina Keunecke Beck"
+    var idade = 17
+    var altura = 1.82
+
+    console.log("Meu nome é " + nome + ", tenho " + idade + " anos. Minha altura é " + altura + ".")
+
+    var primeira_aula = true
+
+    if (primeira_aula) {
+        console.log("Sim é a primeira aula!")
+    } else {
+        console.log("Não é a primeira aula")
+    }
+
+    if(idade >= 18){
+        console.log("Maior de idade")
+    }else if(altura>=1.80){
+        console.log("É de menor porém é alto")
+    }else{
+        console.log("Menor de idade e não é alto")
+    }
+
+    var repeticoes = 10
+
+    for(i=0;i<repeticoes;i++){
+        console.log("Repetição = " +i)
+    }
+
+    var quantidade = 5
+
+    while(quantidade>0){
+        console.log("Quantidade = " + quantidade)
+        quantidade--
+    }
+
+</script>
+
+</html>

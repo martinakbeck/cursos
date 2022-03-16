@@ -1,0 +1,10 @@
+idades = [15, 87, 32, 65, 56, 32, 49, 37]
+print('Sorted')
+print(sorted(idades))
+print('Sorted contrário')
+print(sorted(idades, reverse=True))
+print('Reversed')
+print(list(reversed(sorted(idades))))
+print('Sort')
+sorted(idades)
+print(idades)

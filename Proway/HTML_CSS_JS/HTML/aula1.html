@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Meu primeiro site</title>
+    </head>
+    <body>
+        <h1> Meu primeiro site</h1>
+        <a href="pagina/pagina.html">Ir para página 1.</a>
+        <br />
+        <a href="http://www.google.com/">Link 1.</a>
+        <br/>
+        <a href="http://www.proway.com.br/ead">Link 2.</a>
+        <br/>
+        <a href="https://dog.ceo/">Link 3.</a>
+        <style>
+            a:{
+                color:palegreen
+            }
+            a:active{
+                color:blueviolet
+            }
+            a:visited{
+                color:orangered  
+            }
+            a:hover{
+                color: pink
+            }
+        </style>
+
+        <p>
+        <u>Mussum Ipsum, cacilds vidis litro abertis</u>.<br/> <b>Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl</b>. <i>In elementis mé pra quem é amistosis quis leo</i>. <u>Suco de cevadiss deixa as pessoas mais interessantis</u>. <i>Delegadis gente finis</i>, <b>bibendum egestas augue arcu ut est</b>.
+        </p>
+        <h2> Segundo Parágrafo</h2>
+        <p>
+        <b>Interagi no mé, cursus quis, vehicula ac nisi. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Leite de capivaris, leite de mula manquis sem cabeça. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.</b>
+        </p>    
+        <h3> Terceiro Parágrafo</h3>
+        <p>
+        <i>Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Casamentiss faiz malandris se pirulitá. Diuretics paradis num copo é motivis de denguis. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.</i>
+        </p>
+        <h4> Quarto Parágrafo</h4>
+        <p>
+        <u>Sapien in monti palavris qui num significa nadis i pareci latim.  Detraxit consequat et quo num tendi nada. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Per aumento de cachacis, eu reclamis.</u>
+        </p>
+        <h5> Quinto Parágrafo</h5>
+        <p>
+        <u>Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Atirei o pau no gatis, per gatis num morreus. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.</u>
+        </p>
+     <table border = 1px>
+        <thead>
+             <tr>
+             <th>Horário</th>
+             <th>Segunda</th>
+             <th>Terça</th>
+             <th>Quarta</th>
+             <th>Quinta</th>
+             <th>Sexta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08:00 - 09:00</td>
+                <td colspan ="2">Português</td>
+                <td>Matemática</td>
+                <td>Inglês</td>
+                <td>História</td>
+            </tr>
+            <tr>
+                <td>09:00 - 10:00</td>
+                <td colspan = "2">História</td>
+                <td>Geografia</td>
+                <td>Ciências</td>
+                <td>Matemática</td>
+            </tr>
+            <tr>
+                <td>10:00 - 10:15</td>
+                <td colspan = "5">RECREIO</td>
+            </tr>
+            <tr>
+                <td>10:15 - 11:00</td>
+                <td rowspan = "2">Ed Física</td>
+                <td>História</td>
+                <td>Geografia</td>
+                <td>Ciências</td>
+                <td rowspan = "2">Matemática</td>
+            </tr>
+            <tr>
+                <td>11:00 - 12:00</td>
+                <td>Inglês</td>
+                <td>Português</td>
+                <td>História</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Horário</th>
+                <th>Segunda</th>
+                <th>Terça</th>
+                <th>Quarta</th>
+                <th>Quinta</th>
+                <th>Sexta</th>
+               </tr>
+        </tfoot>
+     </table> 
+     <br  />
+     <form method="GET">
+         <label for="nomeFormulario"> Nome </label> 
+         <input id="nomeFormulario" type="text" placeholder="Digite seu nome" name="Nome" /> 
+         <br />
+         <label for="dataFormulario"> Data </label> 
+         <input id="dataFormulario" type="date" name="data" />
+         <br />
+         <label for="idadeFormulario"> Idade </label> 
+         <input id="idadeFormulario" type="number" placeholder="Digite sua idade" name="Idade" />
+         <br />
+         <label for="emailFormulario"> E-mail </label> 
+         <input id="emailFormulario" type="email" placeholder="Digite seu e-mail" name="E-mail" />
+         <br />
+         <label for="msgFormulario">Mensagem</label>
+         <br />
+         <textarea cols=30 id="msgFormulario" name="mensagem"></textarea>
+         <br/>
+         Dias da Semana
+         <input type="checkbox" id="segundacheck" name="dias" value="segunda"><label for="segundacheck">Segunda</label>
+         <input type="checkbox" id="tercacheck" name="dias" value="terca"><label for="tercacheck">Terça</label>
+         <input type="checkbox" id="quartacheck" name="dias" value="quarta"><label for="quartacheck">Quarta</label>
+         <input type="checkbox" id="quintacheck" name="dias" value="quinta"><label for="quintacheck">Quinta</label>
+         <input type="checkbox" id="sextacheck" name="dias" value="sexta"><label for="sextacheck">Sexta</label>
+         <input type="checkbox" id="sabadocheck" name="dias" value="sabado"><label for="sabadocheck">Sábado</label>
+         <input type="checkbox" id="domingocheck" name="dias" value="domingo"><label for="domingocheck">Domingo</label>
+         <br/>
+         <input type="radio" id="manharadio" name="horario" value="manha"><label for="manharadio">Manhã</label>
+         <input type="radio" id="tarderadio" name="horario" value="tarde"><label for="tarderadio">Tarde</label>
+         <input type="radio" id="noiteradio" name="horario" value="noite"><label for="noiteradio">Noite</label>
+         <br/>
+         <select name="Cidade">
+            <option>Selecione uma cidade</option>
+            <option value="Blumenau">Blumenau</option>
+            <option value="Indaial">Indaial</option>
+            <option value="Gaspar">Gaspar</option>
+            <option value="Pormerode">Pomerode</option>
+            <option value="Timbó">Timbó</option>
+         </select>
+         <select multiple="multiple" name="Cidade">
+            <option value="Blumenau">Blumenau</option>
+            <option value="Indaial">Indaial</option>
+            <option value="Gaspar">Gaspar</option>
+            <option value="Pormerode">Pomerode</option>
+            <option value="Timbó">Timbó</option>
+         </select>
+         <input type="submit"/>
+     </form>  
+    </body>
+</html>
+
+
+

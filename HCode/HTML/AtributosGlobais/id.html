@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo ID</title>
+    <style>
+        #box-1{
+            width: 100px;
+            height: 100px;
+            background-color: darkseagreen;
+        }
+
+        #box-2{
+            width: 100px;
+            height: 100px;
+            background-color:ivory;
+        }
+    </style>
+</head>
+<body>
+    <h1>ID</h1>
+    <h3>Define uma identificação única para o elemento</h3>
+    <h4>Mais de um elemento com o mesmo ID usar Class</h4>
+
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+
+    <script>
+        const box1 = document.getElementById('box-1');
+
+        console.log(box1);
+
+        const box2 = document.querySelector('#box-2');
+
+        console.log(box2)
+    </script>
+</body>
+</html>

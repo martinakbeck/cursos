@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Aprendendo Classes</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Aprendendo Classes</h1>
+        <a href="../index.html">Voltar</a>
+        <hr>
+    
+
+        <div class="row">
+            <div class="col-8">
+                <input type="text" name="" id="nome" placeholder="Nome do Aluno" class="form-control">
+                <input type="text" name="" id="matricula" placeholder="Matricula do Aluno" class="form-control">
+                <button class="btn btn-primary" id="add_aluno">Salvar Aluno</button>
+            </div>
+
+            <div class="col-4">
+                <button class="btn btn-success form-control" id="add_nota">Add Nota</button>
+                <input type="number" name="" id="nota" placeholder="Nota do Aluno" class="form-control">
+                <table class="table table-striped table-bordered" >
+                    <thead>
+                        <tr>
+                            <th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody id="notas">
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <table class="table table-dark table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Aluno</th>
+                        <th>Matricula</th>
+                        <th>Média</th>
+                        <th>Situação</th>
+                    </tr>
+                </thead>
+                <tbody id="alunos">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="Aluno.js"></script>
+
+    <script>
+
+        var notas = new Array
+        var alunos = new Array
+
+        var chave_armazenamento = "cad_alunos_js_003"
+
+        verificarArmazenamento()
+
+        function verificarArmazenamento(){
+            if(localStorage.getItem(chave_armazenamento)==null){
+                atualizarAmarzenamento()
+                console.log("Primeiro Acesso")
+            }else{
+                console.log("tem algo la")
+                alunos = JSON.parse(localStorage.getItem(chave_armazenamento))
+                console.log(alunos)
+
+                alunos.forEach(
+                    function(item){
+                        let aluno = new Aluno(item.nome, item.matricula, item.notas)
+                        insereLinhaAluno(item)
+                    }
+                )
+            }
+        }
+        function atualizarAmarzenamento(){
+            localStorage.setItem(chave_armazenamento, JSON.stringify(alunos))
+        }
+
+        $("#add_nota").click(
+            function(){
+                //let nota = document.getElementById(nota).value com js
+                let nota = $("#nota").val() //com jquery
+                if(nota == ""){
+                    return
+                }
+
+            notas.push( Number(nota))
+            console.log(notas)
+
+            $("#nota").val("")
+            inserLinhaNotas(nota)
+            }
+
+        )
+
+        function inserLinhaNotas(nota){
+
+            let linha = $("<tr></tr>")
+            linha.append($("<td></td>").text(nota))
+            $("#notas").append(linha)
+        } 
+    
+        $("#add_aluno").click(
+            function () {
+                let nome = $("#nome").val() //pegar o valor
+                let matricula = $("#matricula").val()
+
+                if(nome.trim()=="" || matricula.trim() =="" || notas.length==0){
+                    return alert("Precisa inserir nota")
+                }
+
+                let aluno = new Aluno(nome, matricula, notas)
+                alunos.push(aluno)
+                console.log(alunos)
+
+                $("input").val("") //limpa campos do formulario
+                $("notas").empty() //limpa
+                notas = new Array
+
+                insereLinhaAluno(aluno)
+                atualizarAmarzenamento()
+
+            }
+        )
+
+        function insereLinhaAluno(aluno){
+            let linha= novaTag("tr")
+            linha.append(novaTag("td").text(aluno.nome))
+            linha.append(novaTag("td").text(aluno.matricula))
+            linha.append(novaTag("td").text(aluno.calculaMedia))
+            linha.append(novaTag("td").text("Ainda não calculei"))
+            $("#alunos").append(linha)
+        }
+
+        function novaTag(tag){
+            return $("<"+tag+"></"+tag+">")
+        }
+
+
+
+    </script>
+</body>
+</html>

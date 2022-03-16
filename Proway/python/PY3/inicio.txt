@@ -1,0 +1,39 @@
+Start Apache pelo Xampp
+
+Instalar o Django pelo terminal (pip install Django)
+
+Start projeto (django-admin startproject nomeprojeto ou py -m django startproject nomeprojeto)
+
+cd nomeprojeto
+
+python manage.py runserver - cria automaticamente db.sqlite3 e a aplicação já está rodando
+
+linha 106/settings - linguagem (America/Sao_Paulo)
+
+
+__init__ - arquivo do próprio django para fazer um controle das versões que ele utiliza
+
+asgi e wsgi - informações que utilizamos quando hospedamos em um lugar que não seja local. Usa um dos dois. Não são todos servidores que aceitam Python.
+        wsgi  está com default
+        
+settings - configurações que utilizamos no nosso aplicativo.
+    - url
+    - templates
+    - banco de dados
+    - default_auto_field (?)
+    
+manage - faz importações os e sys.
+
+Comandos:
+python manage.py runserver - cria automaticamente db.sqlite3 e a aplicação já está rodando
+pyhton manage.py - mostra comandos disponíveis
+python manage.py migrate - cria as tabelas. Migra admin, auth, contenttypes, sessions
+python manage.py createsuperuser - criar usuário master
+
+crtl + c - derruba aplicação
+
+
+
+
+
+

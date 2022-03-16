@@ -1,0 +1,20 @@
+ctrl+b - esconde aba dos arquivos
+
+var - variavel global
+
+let - variavel local
+
+typeof() - tipo da variavel
+
+Number(prompt())- para converter para inteiro
+
+console.warn - mensagem de aviso
+console.error - mensagem de erro
+
+//TODO mensagem de erro grande - para lembrar de fazer depois
+
+eval() interpreta a formula matemática e retorna o valor
+
+slice() função para alterar a variável, mas não definitivo. precisa receber na variavel novamente
+
+funcao(this) - passo o próprio como parametro

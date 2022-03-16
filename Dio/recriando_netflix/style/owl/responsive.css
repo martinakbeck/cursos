@@ -1,0 +1,17 @@
+@media screen and (max-width:700px){/*sempre que a minha estiver em tal tamanho irá acontecer...*/
+    header .container{
+        display: flex;
+        flex-direction: column; /*faz o menu ficar alinhado, sem fazer ficar um embaixo do outro, todo bagunçado*/
+        
+    }
+    .botao{
+        margin-top: 5px;
+        width: 190px;
+    }
+}
+
+@media screen and(min-width:1000px){
+    .descricao{
+        width: 50%;
+    }
+}

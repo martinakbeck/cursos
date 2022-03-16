@@ -1,0 +1,45 @@
+{% extends 'base.html'%} 
+
+{% block titulo %}Excluir Cliente{% endblock %}
+
+{% block corpo %}
+<div id="conteudo-dados">
+
+    <div style="display: flex; justify-content:center;">
+        <h1><label class='text-primary'>Exclusão de Cliente</label></h1>
+    </div>
+        <form method="post" action="">
+            <div class="mb-3">
+                <label for="txtNome" class="form-label" >Nome</label>
+                <input type="txt" class="form-control" id="txtNome" placeholder='Informe seu nome' readonly />
+            </div>
+            <div class="mb-3">
+                <label for="txtEmail" class="form-label">E-mail</label>
+                <input type="email" class='form-control' name="textEmail" id='txtEmail' placeholder="usuario@provedor.com.br" readonly/>
+            </div>
+            <div class="mb-3">
+                <label for="txtData" class="form-label">Data Nascimento</label>
+                <input type="date" class='form-control' name="textData" id='txtData' readonly/>
+            </div>
+            <div class="mb-3">
+                <label for="txtCPFCNPJ" class="form-label">CPF | CNPJ</label>
+                <input type="number" class='form-control' name="textCPFCNPJ" id='txtCPFCNPJ' placeholder="Somente números" readonly/>
+            </div>
+
+            <div class="mb-3">
+                <label for="txtProfissao" class="form-label" >Profissão</label>
+                <input type="txt" class="form-control" id="txtProfissao" placeholder='Informe sua Profissão' readonly />
+            </div>
+            <div class="mb-3">
+                <label for="txtRenda" class="form-label" >Renda (R$)</label>
+                <input type="text" class="form-control" id="txtRenda" placeholder='Informe sua renda (R$)' readonly />
+            </div>
+            <div class="mb-3">
+                <input type='submit' value="Excluir" class="btn btn-danger">
+                <input type='submit' value="Cancelar" class="btn btn-secondary">
+            </div>
+        </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+elefante
+cachorro
+gato
+papagaio
+cobra
+jacare
+minhoca
+rato
+zebra
+leão

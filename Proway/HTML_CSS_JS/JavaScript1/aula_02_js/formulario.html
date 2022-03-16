@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Formulário</title>
+</head>
+<body>
+    <h1>Meu form</h1>
+    <hr>
+
+    <form action="javascript:validar_form()">
+        <label for="nome_visitante">Nome: </label>
+        <input type="text" name="Nome do Visitante" id="nome_visitante" placeholder="Seu nome completo" >
+
+        <br>
+        
+        <label for="idade_visitante">Idade: </label>
+        <input type="number" name="Idade do Visitante" id="idade_visitante" placeholder="Sua idade" >
+              
+        <br>
+        
+        <label for="email_visitante">E-mail: </label>
+        <input type="email" name="E-mail do Visitante" id="email_visitante" placeholder="Seu e-mail" >
+        
+        <br>
+        
+        <label for="sugestao">Sugestão: </label>
+        <textarea name="sugestão" id="sugestao" cols="22" rows="10" placeholder="Só aceitamos susgestões, reclamações serão ignoradas"></textarea>
+        
+
+        <hr>
+        <input type="reset" value="Limpar campos">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script src="js/form_01.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'base.html'%} 
+
+{% block titulo %}Excluir Cidade{% endblock %}
+
+{% block corpo %}
+<div id="conteudo-dados">
+    <div style="display: flex; justify-content:center;">
+        <h1><label class='text-primary'>Exclusão de Cidade</label></h1>
+    </div>
+        <form method="post" action="">
+            <div class="mb-3">
+                <label for="txtNome" class="form-label" >Nome</label>
+                <input type="txt" class="form-control" id="txtNome" placeholder='Informe seu nome' readonly>
+            </div>
+            <div class="mb-3">
+                <label for="txtSigla" class="form-label" >Sigla</label>
+                <select name="'txtSigla" id="txtSigla" class="form-select" disabled>
+                    <option value="0">Selecione</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input type='submit' value="Excluir" class="btn btn-danger">
+                <input type='submit' value="Cancelar" class="btn btn-secondary">
+            </div>
+        </form>
+
+</div>
+
+{% endblock %}

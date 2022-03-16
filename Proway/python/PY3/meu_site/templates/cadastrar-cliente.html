@@ -1,0 +1,84 @@
+{% extends 'base.html'%} 
+
+{% block titulo %}Cadastrar Cliente{% endblock %}
+
+{% block corpo %}
+<div id="conteudo-dados">
+
+    <div style="display: flex; justify-content:center;">
+        <h1><label class='text-primary'>Cadastro de Cliente</label></h1>
+    </div>
+        <form method="post" action="">
+            <div class="mb-3">
+                <label for="txtNome" class="form-label" >Nome</label>
+                <input type="txt" class="form-control" id="txtNome" placeholder='Informe seu nome' required />
+            </div>
+            <div class="mb-3">
+                <label for="txtEmail" class="form-label">E-mail</label>
+                <input type="email" class='form-control' name="textEmail" id='txtEmail' placeholder="usuario@provedor.com.br" required/>
+            </div>
+            <div class="mb-3">
+                <label for="txtData" class="form-label">Data Nascimento</label>
+                <input type="date" class='form-control' name="textData" id='txtData' required/>
+            </div>
+            <div class="mb-3">
+                <label for="txtCPFCNPJ" class="form-label">CPF | CNPJ</label>
+                <input type="number" class='form-control' name="textCPFCNPJ" id='txtCPFCNPJ' placeholder="Somente números" />
+            </div>
+            <div class="mb-3">
+                <label for="txtCidade" class="form-label">Cidade</label>
+                <select name="textCidade" id='txtCidade' class="form-select">
+                    {% for cidade in cidade %}
+                    <option value="{{ cidade.id }}"> {{ cidade.nome}} </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="txtSexo" class="form-label">Sexo</label>
+                <select name="textSexo" id='txtSexo' class="form-select">
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="txtProfissao" class="form-label" >Profissão</label>
+                <input type="txt" class="form-control" id="txtProfissao" placeholder='Informe sua Profissão' required />
+            </div>
+            <div class="mb-3">
+                <label for="txtRenda" class="form-label" >Renda (R$)</label>
+                <input type="text" class="form-control" id="txtRenda" placeholder='Informe sua renda (R$)' required />
+            </div>
+            <div class="mb-3">
+                <label for="txtCarro" class="form-label">Carro</label>
+                <select name="textCarro" id='txtCarro' class="form-select">
+                    <option value="S">Sim</option>
+                    <option value="N">Não</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="txtFilhos" class="form-label">Filhos</label>
+                <select name="textFilhos" id='txtFilhos' class="form-select">
+                    <option value="S">Sim</option>
+                    <option value="N">Não</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="txtEstadoCivil" class="form-label">Estado Civil</label>
+                <select name="textEstadoCivil" id='txtEstadoCivil' class="form-select">
+                    <option value="1">Solteiro(a)</option>
+                    <option value="2">Casado(a)</option>
+                    <option value="3">Divorciado(a)</option>
+                    <option value="4">Viúvo(a)</option>
+                    <option value="5">Desquistado(a)</option>
+                    <option value="6">União Estável</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input type='submit' value="Enviar" class="btn btn-primary">
+                <input type='submit' value="Cancelar" class="btn btn-secondary">
+            </div>
+        </form>
+
+</div>
+
+{% endblock %}
