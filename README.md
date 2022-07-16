@@ -1,2 +1,2 @@
 # cursos
- arquviso de diversos cursos que fiz ao longo do tempo
+ arquivos de diversos cursos que fiz ao longo do tempo
